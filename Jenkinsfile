@@ -1,7 +1,7 @@
 pipeline{
 
     agent any
-    
+
     tools{
         nodejs "NODE22"
     }
@@ -43,7 +43,7 @@ pipeline{
         {
             steps{
                 withCredentials([
-                    usernamePasswoed(
+                    usernamePassword(
                         credentialsId:"dockerhub",
                         usernameVariable:"DOCKER_USERNAME",
                         passwordVariable:"DOCKER_PASSWORD"
